@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <%- include('includes/head_css.ejs') %>
+</head>
+
+<body background="/img/sky.jpg" align="center">
+
+    <%- include('includes/navigation.ejs') %>
+    <img src="/img/giphy2.gif" alt="hii" height="500px" width="600px" style="border-radius:10%">
+    <h3 style="color:white">Try searching another movie.</h3>
+
+    <% let x; %>
+    <% if (userId==undefined) { %>
+        <% x="/home"; %>
+    <% }else{ %>
+        <% x="/home/"+userId; %>
+    <% } %>
+
+    <form action="<%= x %>">
+        <button type="submit" name="button" class="btn btn-primary">GO HOME!</button>
+    </form>
+</body>
+
+</html>
